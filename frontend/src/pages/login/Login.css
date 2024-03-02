@@ -1,0 +1,17 @@
+.loginDiv{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://img.freepik.com/foto-gratis/collage-fondo-pelicula_23-2149876030.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1707955200&semt=ais");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.h2login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px ;
+    margin-top: 50px ;
+    color: white;
+}

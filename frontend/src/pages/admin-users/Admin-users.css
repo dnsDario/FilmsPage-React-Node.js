@@ -1,0 +1,27 @@
+.divAdmin{
+    display: flex;
+    flex-direction: column;
+    padding-top:10px;
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    justify-content:left;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+.admin{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 1000px;
+}
+
+.listaBuscador{
+    margin-top: 50px;
+    width: 55%;
+    height: 900px;
+    overflow-y: auto;
+    scrollbar-width: none;
+
+}

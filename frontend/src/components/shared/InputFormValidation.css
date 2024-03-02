@@ -1,0 +1,18 @@
+.normasRegistro{
+    display: flex;
+    flex-direction: column;
+    margin: 1px;
+    padding: 0px!important;
+    background-color: rgba(128, 128, 128, 0.367);
+    border-radius: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+.norma{
+    display: flex;
+    flex-direction: row; 
+    margin: 2px;
+    padding: 2px;
+    font-size: 14px;
+    font-weight: 700;
+}

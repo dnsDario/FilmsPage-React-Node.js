@@ -1,0 +1,14 @@
+.col-md-8{
+    padding: 40px 30px;
+    color:white;
+    border: 5px aquamarine solid;
+    border-radius: 30px;
+    background-color: black;
+}
+
+.msgAlert{
+    font-size: 12px;
+    margin-bottom: 1px !important;
+    padding: 1px;
+}
+

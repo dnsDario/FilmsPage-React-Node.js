@@ -1,0 +1,9 @@
+.formsFilms{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 90vh;
+}
+
+.formFilms_Create{
+    height: 20% ;
+}

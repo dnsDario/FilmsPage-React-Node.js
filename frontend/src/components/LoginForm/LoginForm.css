@@ -1,0 +1,12 @@
+.myForm{
+    padding: 40px 30px;
+    color:white;
+    border: 5px aquamarine solid;
+    border-radius: 30px;
+    background-color: black;
+    font-size: 22px;
+}
+p{
+    font-size: 14px;
+    color: white !important;
+}

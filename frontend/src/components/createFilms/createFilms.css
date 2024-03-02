@@ -1,0 +1,24 @@
+.createFilms{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    color:white;
+    border: 5px aquamarine solid;
+    border-radius: 30px;
+    background-color: black;
+    font-size: 18px;
+}
+.titleForm{
+    color: aquamarine;
+}
+.createFilms input {
+    width: 90%;
+    height: 22px;
+}
+.mb-1 label{
+    margin-bottom: 3px;
+}
+p{
+    font-size: 12px;
+    color: white !important;
+}

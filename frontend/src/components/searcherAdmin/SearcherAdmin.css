@@ -1,0 +1,18 @@
+.divSearcher{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.inputSearcher{
+    margin-right: 10px;
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 10px;
+}
+.buttonSearcher{
+    color: white;
+    border: 2px white solid;
+    padding: 3px;
+}
