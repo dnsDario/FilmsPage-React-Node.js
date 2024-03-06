@@ -12,6 +12,14 @@ import AdminFilms from './pages/admin-films/Admin-films'
 import AdminUsers from './pages/admin-users/Admin-users'
 
 
+
+import { GiFilmStrip } from "react-icons/gi";
+import { GiFilmSpool } from "react-icons/gi";
+import { GrUserAdmin } from "react-icons/gr";
+import { AiOutlineLogout } from "react-icons/ai";
+import { FaHome } from "react-icons/fa";
+import { AiOutlineLogin } from "react-icons/ai";
+import { GiArchiveRegister } from "react-icons/gi";
 /* import NavBar from './components/navBar/NavBar' */
 
 function App() {
@@ -25,15 +33,16 @@ function App() {
     <>
       <header>
         <nav>
+        <h2 className='logoNav'>🏝️Paradise Films</h2>
           <ul>            
-            {user?'':<li><Link className="btn btn-primary text-white no-underline" to="/">Home</Link> </li>}
-            {user?'':<li><Link className="btn btn-primary text-white no-underline" to="/login">Iniciar Sesión</Link></li>}
-            {user?'':<li><Link className="btn btn-primary text-white no-underline" to="/signup">Registro</Link></li>}
-            {user?<li><Link className="btn btn-primary text-white no-underline" to="/films">Películas</Link></li>:''}
-            {user?<li><Link className="btn btn-primary text-white no-underline" to="/series">Series</Link></li>:''}
-            {user && user.role === 'admin'?<li><Link className="btn btn-primary text-white no-underline" to="/admin-films">Admin Films</Link></li>:''}  
-            {user && user.role === 'admin'?<li><Link className="btn btn-primary text-white no-underline" to="/admin-users">Admin Users</Link></li>:''}  
-            {user?<button className='btn btn-warning' onClick={handleLogout}>Logout</button>: ''}            
+            {user?'':<li><Link className="btnNav" to="/"><FaHome />Home</Link> </li>}
+            {user?'':<li><Link className="btnNav" to="/login"><AiOutlineLogin />Iniciar Sesión</Link></li>}
+            {user?'':<li><Link className="btnNav" to="/signup"><GiArchiveRegister />Registro</Link></li>}
+            {user?<li><Link className="btnNav" to="/films"><GiFilmStrip />Películas</Link></li>:''}
+            {user?<li><Link className="btnNav" to="/series"><GiFilmSpool />Series</Link></li>:''}
+            {user && user.role === 'admin'?<li><Link className="btnNav" to="/admin-films"><GrUserAdmin />Admin Films</Link></li>:''}  
+            {user && user.role === 'admin'?<li><Link className="btnNav" to="/admin-users"><GrUserAdmin />Admin Users</Link></li>:''}  
+            {user?<button onClick={handleLogout}><Link className='logout'><AiOutlineLogout />Logout</Link></button>: ''}            
           </ul>
         </nav>
       </header>

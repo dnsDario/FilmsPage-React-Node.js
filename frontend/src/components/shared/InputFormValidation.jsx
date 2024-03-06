@@ -1,4 +1,4 @@
-import './inputFormValidation.css'
+import './InputFormValidation.css'
 
 export default function InputFormValidation({value, onChange, type, rules}){
 

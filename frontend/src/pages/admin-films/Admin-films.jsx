@@ -1,5 +1,5 @@
 import TableAdminFilms from "../../components/tableAdminFilms/TableAdminFilms";
-import ActionsAdminFilms from "../../components/actionsAdminFilms/actionsAdminFilms";
+import ActionsAdminFilms from "../../components/actionsAdminFilms/ActionsAdminFilms"
 import './Admin-films.css'
 
 export default function AdminFilms(){

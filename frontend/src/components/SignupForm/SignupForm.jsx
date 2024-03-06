@@ -2,7 +2,7 @@ import  { useState } from "react";
 import './SignupForm.css'
 import axios from 'axios'
 import {useNavigate} from "react-router-dom"
-import InputFormValidation from "../shared/InputFormValidation";
+import InputFormValidation from "../shared/InputFormValidation"
 
 export default function SignupForm()  {
   const [datos, setDatos] = useState({name: "", email: "", password: "", repetirPassword: ""});
