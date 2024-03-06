@@ -8,7 +8,9 @@ table {
     display: block;
     width: 95%;
     border-collapse: collapse;
-
+}
+table thead, table tbody{
+  border: 5px solid aquamarine;
 }
 table thead tr{
   height: 100px !important;
@@ -22,7 +24,7 @@ table tbody tr{
 }
 table th, table td {
   color:white;
-  border: 3px solid #fffefe;
+  border: 5px solid aquamarine;
   padding: 8px;
   text-align: left;
   max-width: 250px;

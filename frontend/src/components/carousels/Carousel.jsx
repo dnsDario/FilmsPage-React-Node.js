@@ -32,10 +32,10 @@ export const CarouselFilms = () => {
   const moverCarrusel = React.useRef()
 
   function moverIzq(){
-    moverCarrusel.current.scrollLeft -= 1093.824
+    moverCarrusel.current.scrollLeft -= 1056
   }
   function moverDcha(){
-    moverCarrusel.current.scrollLeft += 1093.824
+    moverCarrusel.current.scrollLeft += 1056 //1320*0.8 para que la última por la derecha sea la primera por la izq.
   }
 
   return (
@@ -73,7 +73,7 @@ export const CarouselFilms = () => {
         </div>
         <div className="contenedor-peliculas-recomendadas">
           <div className="contenedor-titulo-controles">
-            <h3>Peliculas Recomendadas</h3>
+            <h2>Peliculas Recomendadas</h2>
             <div className="indicadores"></div>
           </div>
           <div className="contenedor-principal">

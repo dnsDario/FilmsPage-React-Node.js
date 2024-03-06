@@ -1,4 +1,4 @@
-.titleInputAndButtonDeleteFilms{
+.titleInputAndButtonDeleteUsers{
     display: flex;
     flex-flow: column wrap;
     width: 95%;
@@ -7,27 +7,27 @@
     border: 5px solid aquamarine;
     border-radius: 20px;
 }
-.titleInputAndButtonDeleteFilms h3{
+.titleInputAndButtonDeleteUsers h3{
     color: aquamarine;
     margin: 10px 20px;
 }
-.inputAndButtonDeleteFilms{
+.inputAndButtonDeleteUsers{
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-.inputAndButtonDeleteFilms input{
+.inputAndButtonDeleteUsers input{
     width: 60%;
     margin: 10px 20px;
     color: black;
     border-radius: 10px;
     text-align: center;
 }
-.inputAndButtonDeleteFilms button{
+.inputAndButtonDeleteUsers button{
     width: 30%;
 }
-.inputAndButtonDeleteFilmsP{
+.inputAndButtonDeleteUsersP{
     margin: 10px 20px;
     color: yellow !important;
 }

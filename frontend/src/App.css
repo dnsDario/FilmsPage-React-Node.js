@@ -2,26 +2,27 @@
 nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: center;
+    height: 100px;
     padding: 20px;
     color:white;
     background-color: black;
     color: aquamarine;
 }
+.logoNav{
+    font-size: 48px;
+    color: aqua;
+}
 ul{
     display: flex;
     flex-direction: row;
     width: 70%;
-    justify-content: space-around;
+    justify-content: flex-end;
     margin: 0 !important;
     align-items: center;
     color: black;
 }
-nav ul .btn.btn-primary{
-    font-size: 22px;
-}
-
 nav ul li:hover{
     transform: translateY(0.1rem);
     scale: 1.025;
@@ -36,10 +37,11 @@ nav ul li link{
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 600;
     text-decoration: none;
     color: aquamarine;
+    margin: 5px 40px;
 }
 .logout{
     display: flex;

@@ -40,7 +40,8 @@ export default function TableAdminUsers() {
         
             <div className="buscador">
                 <SearcherAdmin onFiltrar={filtradoUsers}></SearcherAdmin>
-                <table>
+                <div className="tableFoundUsers">
+                <table className="tableFoundUsers_table">
                 <thead>
                     <tr>
                       <th>ID</th>
@@ -56,11 +57,12 @@ export default function TableAdminUsers() {
                         <td>{x.name}</td>
                         <td>{x.email}</td>
                         <td>{x.role}</td>
-
                     </tr>
                     ))}
                 </tbody>
                 </table>
+                </div>
+                
             </div>
         
       </>

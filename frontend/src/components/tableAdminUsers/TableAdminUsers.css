@@ -2,28 +2,39 @@
 .buscador{
     display: flex;
     flex-direction: column;
-    margin: 30px 0px;
+    margin: 0px 0px;
 }
-table {
+.tableFoundUsers{
+  overflow-y: scroll;
+  scrollbar-width: none;
+  max-height: 500px;
+  margin-right: 40px; 
+}
+table thead, table tbody{
+  border: 5px solid aquamarine;
+}
+
+.tableFoundUsers_table {
     display: block;
-    width: 95%;
+    width: 100%;
     border-collapse: collapse;
 
 }
 table thead tr{
-  height: 100px !important;
+  height: 100px;
 }
 
 table tbody tr{
   height: 150px;
   max-width: 250px;
   max-height: 400px;
+  
 
 }
 table th, table td {
   color:white;
-  border: 3px solid #fffefe;
-  padding: 8px;
+  border: 3px solid aquamarine;
+  padding: 10px;
   text-align: left;
   max-width: 250px;
 

@@ -20,9 +20,9 @@ export default function DeleteUsers() {
 
   return (
     <>
-      <div className="titleInputAndButtonDeleteFilms">
+      <div className="titleInputAndButtonDeleteUsers">
         <h3>Borra un usuario</h3>
-        <div className="inputAndButtonDeleteFilms">
+        <div className="inputAndButtonDeleteUsers">
         <input 
           type="text"
           placeholder="Introduzca ID del usuario que desea borrar"
@@ -37,10 +37,10 @@ export default function DeleteUsers() {
             deleteUser(id);
           }}
         >
-          Borrar Película
+          Borrar Usuario
         </button>
         </div>
-        <p className="inputAndButtonDeleteFilmsP">{userDeleted} </p>
+        <p className="inputAndButtonDeleteUsersP">{userDeleted} </p>
         
       </div>
     </>

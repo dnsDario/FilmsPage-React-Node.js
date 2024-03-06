@@ -4,8 +4,8 @@ export const SessionContext = createContext()
 
 export function SessionProvider ({children}){
 
-    const [user, setUser] = useState([null])
-    const [cookies, setCookie, removeCookie] = useCookies(['user'])
+    const [user, setUser] = useState("")
+    const [cookies, setCookie, removeCookie] = useCookies(["user"])
 
     useEffect(() => {
         const posibleUsuario = cookies.user
@@ -25,7 +25,7 @@ export function SessionProvider ({children}){
     }
 
     return (
-        <SessionContext.Provider value={{user,login,logout}}>
+        <SessionContext.Provider value={{user,login,logout, cookies}}>
             {children}
         </SessionContext.Provider>
     )

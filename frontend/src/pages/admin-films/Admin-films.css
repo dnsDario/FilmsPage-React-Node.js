@@ -1,7 +1,7 @@
 .divAdmin{
     display: flex;
     flex-direction: column;
-    padding-top:10px;
+    padding-top:20px;
     width: 100%;
     height: auto;
     background-color: rgb(0, 0, 0);
@@ -14,13 +14,13 @@
     display: flex;
     flex-direction: row;
     width: 90%;
-    height: 1000px;
+    height: auto;
 }
 
-.listaBuscador{
-    margin-top: 50px;
+.listaBuscadorFilms{
+    margin: 30px 0px;
     width: 55%;
-    height: 900px;
+    height: 700px;
     overflow-y: auto;
     scrollbar-width: none;
 
@@ -28,6 +28,5 @@
 
 .crearBorrar{
     width: 45%;
-    margin-top: 70px;
-    margin-left: 20px;
+    margin: 30px 20px;;
 }
