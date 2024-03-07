@@ -14,11 +14,12 @@
 }
 .carousel{
     width: 40%;
-    height: 50vh;
+    height: auto;
 }
 .carousel h2{
     color:aquamarine;
     font-weight: 700;
+    font-size: 26px;
 }
 
 
@@ -28,13 +29,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top:  20px;
+    margin-top:  0px;
 }
 
 .contenedor-titulo-controles h2{
     color: aquamarine;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 700;
+    margin: 0px;
 }
 
 .contenedor-titulo-controles .indicadores button{
@@ -55,7 +57,7 @@
     flex-direction: column;
     width: 1320px;
     height: auto;
-    margin-bottom: 70px;
+    margin: 50px;
 }
 .contenedor-peliculas-recomendadas .contenedor-principal {
     display:flex;

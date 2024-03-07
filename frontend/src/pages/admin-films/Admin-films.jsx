@@ -13,12 +13,12 @@ export default function AdminFilms(){
             deseadas de la base de datos
           </h3>
           <div className="admin">
-            <div className="listaBuscadorFilms">
-              <TableAdminFilms></TableAdminFilms>
-            </div>
             <div className="crearBorrar">
               <ActionsAdminFilms></ActionsAdminFilms>
-            </div>            
+            </div>
+            <div className="listaBuscadorFilms">
+              <TableAdminFilms></TableAdminFilms>
+            </div>                        
           </div>
           
         </div>

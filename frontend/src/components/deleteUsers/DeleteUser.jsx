@@ -6,26 +6,27 @@ import { SessionContext } from "../../context/SessionProvider";
 export default function DeleteUsers() {
   const { user } = useContext(SessionContext);
   const [id, setId] = useState("");
-  const [userDeleted, setUserDeleted] = useState(["No se ha borrado ningún usuario por el momento"]);
-  
-  
   
   function deleteUser(id){  
-    axios.delete(`http://localhost:3000/api/users/${id}?token=${user.token}`)
+    let routeDeleteUserById = `http://localhost:3000/api/users/${id}?token=${user.token}`;
+    console.log ('esta es la ruta delete',routeDeleteUserById)
+    axios.delete(routeDeleteUserById)
       .then((response) => {
-         console.log(response.data)
+        setId('')
+        alert(`El siguiente usuario fué eliminado:${JSON.stringify(response.data.userDeleted.name)} `);
+        console.log('response es:', response.data)
+        console.log(`El siguiente usuario fué eliminado:${JSON.stringify(response.data.userDeleted)} `)
     })
   }
     
-
   return (
     <>
       <div className="titleInputAndButtonDeleteUsers">
-        <h3>Borra un usuario</h3>
+        <h3>Borrar usuarios por ID</h3>
         <div className="inputAndButtonDeleteUsers">
         <input 
           type="text"
-          placeholder="Introduzca ID del usuario que desea borrar"
+          placeholder="Introduzca ID de usuario"
           value={id}
           onChange={(e) => {
             setId(e.target.value);
@@ -37,11 +38,9 @@ export default function DeleteUsers() {
             deleteUser(id);
           }}
         >
-          Borrar Usuario
+          Eliminar
         </button>
         </div>
-        <p className="inputAndButtonDeleteUsersP">{userDeleted} </p>
-        
       </div>
     </>
   );

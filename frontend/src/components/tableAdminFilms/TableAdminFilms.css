@@ -6,29 +6,19 @@
 }
 table {
     display: block;
-    width: 95%;
+    width: 100%;
     border-collapse: collapse;
+    font-size: 12px;
 }
 table thead, table tbody{
   border: 5px solid aquamarine;
 }
-table thead tr{
-  height: 100px !important;
-}
 
-table tbody tr{
-  height: 150px;
-  max-width: 250px;
-  max-height: 400px;
-
-}
 table th, table td {
   color:white;
   border: 5px solid aquamarine;
-  padding: 8px;
-  text-align: left;
-  max-width: 250px;
-
+  padding: 2px;
+  text-align: center;
 }
 table th {
   background-color: #000000;
@@ -37,4 +27,8 @@ table th {
 
 table tr:hover {
   background-color: #423d3d;
+}
+table tr img {
+  margin: 0 auto;
+  height: 100px;
 }

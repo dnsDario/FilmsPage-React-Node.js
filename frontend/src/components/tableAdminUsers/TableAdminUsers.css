@@ -4,6 +4,11 @@
     flex-direction: column;
     margin: 0px 0px;
 }
+.tableUsers{
+  display: block;
+  width: 100%;
+  border-collapse: collapse;
+}
 .tableFoundUsers{
   overflow-y: scroll;
   scrollbar-width: none;
@@ -18,25 +23,20 @@ table thead, table tbody{
     display: block;
     width: 100%;
     border-collapse: collapse;
+    font-size: 14px;
 
 }
-table thead tr{
-  height: 100px;
+.tableFoundUsers_table tr{
+  width: 300px;
+  height: 70px;
 }
 
-table tbody tr{
-  height: 150px;
-  max-width: 250px;
-  max-height: 400px;
-  
-
-}
 table th, table td {
   color:white;
   border: 3px solid aquamarine;
   padding: 10px;
-  text-align: left;
-  max-width: 250px;
+  text-align: center;
+  width: 300px;
 
 }
 table th {

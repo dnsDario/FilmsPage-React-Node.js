@@ -13,12 +13,12 @@ export default function AdminUsers(){
             En este área podrás buscar y borrar los usuarios deseados de la base de datos
           </h3>
           <div className="adminUsers">
-            <div className="listaBuscador">
-              <TableAdminUsers></TableAdminUsers>
-            </div>
             <div className="borrarUser">
               <DeleteUsers></DeleteUsers>
-            </div>            
+            </div>
+            <div className="listaBuscador">
+              <TableAdminUsers></TableAdminUsers>
+            </div>                        
           </div>
         </div>
       </>

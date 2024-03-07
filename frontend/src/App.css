@@ -11,7 +11,7 @@ nav{
     color: aquamarine;
 }
 .logoNav{
-    font-size: 48px;
+    font-size: 40px;
     color: aqua;
 }
 ul{
@@ -54,3 +54,29 @@ nav ul li link{
     border-radius: 10px;
 }
 
+@media screen and (max-width: 1120px) {
+    nav{
+        height: 120px;
+    }
+    .logoNav{
+       
+    }
+    ul{
+        
+    }
+    nav ul li:hover{
+        
+    }
+    
+    nav ul li link{
+        
+        
+    }
+    
+    .btnNav{
+        
+    }
+    .logout{
+        
+    }
+}

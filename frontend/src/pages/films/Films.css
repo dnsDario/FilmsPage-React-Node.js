@@ -3,7 +3,7 @@
     flex-direction: column;
     padding-top:20px;
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-image: url("https://img.freepik.com/foto-gratis/collage-fondo-pelicula_23-2149876030.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1707955200&semt=ais");
     background-repeat: no-repeat;
     background-size: cover;
