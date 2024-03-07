@@ -11,9 +11,13 @@ nav{
     color: aquamarine;
 }
 .logoNav{
+    display: flex;
+    flex-direction: row nowrap;
+    align-items: center;
     font-size: 40px;
     color: aqua;
 }
+
 ul{
     display: flex;
     flex-direction: row;
@@ -37,11 +41,14 @@ nav ul li link{
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     text-decoration: none;
     color: aquamarine;
     margin: 5px 40px;
+}
+.btnNav i{
+    margin-right: 5px;
 }
 .logout{
     display: flex;
@@ -59,7 +66,9 @@ nav ul li link{
         height: 120px;
     }
     .logoNav{
-       
+        width: 200px;
+        font-size: 32px;
+        text-align: center;
     }
     ul{
         
@@ -74,9 +83,26 @@ nav ul li link{
     }
     
     .btnNav{
-        
+        font-size: 16px;
+    }
+    .btnNav i{
+        font-size: 18px;
     }
     .logout{
         
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .logoNav{
+        width: 150px;
+        font-size: 28px;
+        text-align: center;
+    }
+    .btnNav{
+        font-size: 14px;
+    }
+    .btnNav i{
+        font-size: 18px;
     }
 }

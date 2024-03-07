@@ -15,7 +15,12 @@
     color: white;
 
 }
-h1{
+.bienvenida h1{
     text-align: center;
+    margin: 20px;
+}
+.bienvenida h2{
+    text-align: left;
+    margin: 20px;
 
 }

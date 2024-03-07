@@ -70,7 +70,7 @@ async function cambiarUsuario(id, usuario) {
     );
     return usuarioModificado;
   } catch {
-    res.status(500).json({ msg: "error interno al registrarse" });
+    console.log("error interno al registrarse" );
   }
 }
 
@@ -87,15 +87,13 @@ async function modifyPwd(id, nuevaPassword) {
   }
 }
 
-async function borrarUsuario(id){
+async function borrarUsuario(req, res){
   try{
-    const userDeleted = await User.findByIdAndDelete(id)
-    return userDeleted
+    const userDeleted = await User.findByIdAndDelete(req.params.id)
+    return res.status(200).json({msg: "pelicula elminada: ", userDeleted })
   } catch(error){
-    console.log(error)
-    
+    res.status(500).json({ msg: "error interno del servidor" });
   }
-  
 }
 
 

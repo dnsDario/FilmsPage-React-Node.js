@@ -19,6 +19,8 @@ router.post("/signup",pwdIguales, signup);
 
 router.post("/login", login);
 
+router.delete("/:id", isAdmin, borrarUsuario)
+
 /* 
 * Para modificar un usuario, tendremos que poner en la ruta el "id" del usuario a modificar y añadir la query "?token=..(token de admin).."
 * Solo de esta forma, estando loggeado como admin y con el id del usuario a modificar, se podrá modificar y poner otro usuario con role admin.
@@ -54,16 +56,6 @@ router.patch(
   }
 );
 
-router.delete("/:id", isAdmin, async (req, res) => {
-  try{
-    usuarioBorrado = await borrarUsuario(req.params.id)
-    res.status(400).json({msg: "usuario borrado correctamente"})
-  } catch(error){
-    res.status(500).json({ msg: "error interno del servidor" });
-      console.error(error);
-  }
-  
-  
-})
+
 
 module.exports = router;

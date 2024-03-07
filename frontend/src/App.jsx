@@ -14,7 +14,7 @@ import AdminUsers from './pages/admin-users/Admin-users'
 
 
 import { GiFilmStrip } from "react-icons/gi";
-import { GiFilmSpool } from "react-icons/gi";
+
 import { GrUserAdmin } from "react-icons/gr";
 import { AiOutlineLogout } from "react-icons/ai";
 import { FaHome } from "react-icons/fa";
@@ -33,15 +33,15 @@ function App() {
     <>
       <header>
         <nav>
-        <h2 className='logoNav'>🏝️Paradise Films</h2>
+        <h2 className='logoNav'><i>🏝️</i>Paradise Films</h2>
           <ul>            
-            {cookies.user?'':<li><Link className="btnNav" to="/"><FaHome />Home</Link> </li>}
-            {cookies.user?'':<li><Link className="btnNav" to="/signup"><GiArchiveRegister />Registro</Link></li>}
-            {cookies.user?'':<li><Link className="btnNav" to="/login"><AiOutlineLogin />Iniciar Sesión</Link></li>}            
-            {cookies.user?<li><Link className="btnNav" to="/films"><GiFilmStrip />Películas</Link></li>:''}
-            {cookies.user && cookies.user.role === 'admin'?<li><Link className="btnNav" to="/admin-films"><GrUserAdmin />Admin Films</Link></li>:''}  
-            {cookies.user && cookies.user.role === 'admin'?<li><Link className="btnNav" to="/admin-users"><GrUserAdmin />Admin Users</Link></li>:''}  
-            {cookies.user?<button onClick={handleLogout}><Link className='logout'><AiOutlineLogout />Logout</Link></button>: ''}            
+            {cookies.user?'':<li><Link className="btnNav" to="/"><i><FaHome /></i> Home</Link> </li>}
+            {cookies.user?'':<li><Link className="btnNav" to="/signup"><i><GiArchiveRegister /></i>Registro</Link></li>}
+            {cookies.user?'':<li><Link className="btnNav" to="/login"><i><AiOutlineLogin /></i>Iniciar Sesión</Link></li>}            
+            {cookies.user?<li><Link className="btnNav" to="/films"><i><GiFilmStrip /></i>Películas</Link></li>:''}
+            {cookies.user && cookies.user.role === 'admin'?<li><Link className="btnNav" to="/admin-films"><i><GrUserAdmin /></i>Admin Films</Link></li>:''}  
+            {cookies.user && cookies.user.role === 'admin'?<li><Link className="btnNav" to="/admin-users"><i><GrUserAdmin /></i>Admin Users</Link></li>:''}  
+            {cookies.user?<button onClick={handleLogout}><Link className='logout'><i><AiOutlineLogout /></i>Logout</Link></button>: ''}            
           </ul>
         </nav>
       </header>

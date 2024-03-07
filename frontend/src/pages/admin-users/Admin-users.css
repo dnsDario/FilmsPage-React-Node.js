@@ -9,6 +9,9 @@
     align-items: center;
     color: rgb(255, 255, 255);
 }
+.divAdmin h3{
+    margin: 0px 20px;
+}
 
 .adminUsers{
     display: flex;
