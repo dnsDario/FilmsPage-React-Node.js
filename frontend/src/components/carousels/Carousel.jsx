@@ -9,9 +9,9 @@ import { useContext } from "react";
 import { SessionContext } from "../../context/SessionProvider";
 
 export const CarouselFilms = () => {
-  const { login } = useContext(SessionContext);
+  const { user } = useContext(SessionContext);
   const [films, setFilms] = useState([]);
-  const rutaQueryToken = `http://localhost:3000/api/films?token=${login.token}`; //autenticación al solicitar films a la BD
+  const rutaQueryToken = `http://localhost:3000/api/films?token=${user.token}`; //autenticación al solicitar films a la BD
 
   useEffect(() => {
     axios.get(rutaQueryToken).then((response) => {
@@ -26,7 +26,7 @@ export const CarouselFilms = () => {
     }).catch((error) => {
       console.log("Error al obtener las películas:", error);
     });
-  }, []);
+  },[user.token]);
   
 
   const moverCarrusel = React.useRef()
@@ -44,7 +44,7 @@ export const CarouselFilms = () => {
         <div className="carruselsSuperiores">
           <div className="carousel">
             <h2>Películas de Drama</h2>
-            <Carousel
+            <Carousel className="carouselObject"
               slideInterval={3000}
               showControls={true}
               indicators={true}
@@ -58,7 +58,7 @@ export const CarouselFilms = () => {
           </div>
           <div className="carousel">
             <h2>Películas de Comedia</h2>
-            <Carousel
+            <Carousel className="carouselObject"
               slideInterval={2000}
               showControls={true}
               indicators={true}

@@ -6,15 +6,14 @@ import { SessionContext } from "../../context/SessionProvider";
 import "./TableAdminUsers.css";
 
 export default function TableAdminUsers() {
-  const { cookies } = useContext(SessionContext);
+  const { user } = useContext(SessionContext);
     const [users, setUsers] = useState([])
     const [filtradosUsers, setFiltradosUsers] = useState([])
  //autenticación mediante rol al solicitar users a la BD
 
     useEffect(() => {
-      let routeGetUsers = `http://localhost:3000/api/users?token=${cookies.user.token || ''}`;
       axios
-        .get(routeGetUsers)
+        .get(`http://localhost:3000/api/users?token=${user.token || ''}`)
         .then((response) => {
           const foundUsers = response.data.map((user) => ({
             id: user._id,
@@ -27,7 +26,7 @@ export default function TableAdminUsers() {
         .catch((error) => {
           console.log("Error al obtener los usuarios:", error);
         });
-    }, [cookies.user.token]);
+    }, [user.token]);
 
 
     function filtradoUsers(texto){

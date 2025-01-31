@@ -4,6 +4,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: calc(100vh - 100px);
+    
 }
 
 .carruselsSuperiores{
@@ -15,6 +17,9 @@
 .carousel{
     width: 40%;
     height: auto;
+}
+.carouselObject{
+    height: 300px;
 }
 .carousel h2{
     color:aquamarine;

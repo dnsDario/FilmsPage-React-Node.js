@@ -25,7 +25,7 @@ import { GiArchiveRegister } from "react-icons/gi";
 function App() {
   const {cookies, logout, user} = useContext(SessionContext)
   const navigate = useNavigate();
-  const handleLogout = () =>{
+  const handleLogout = () => {
     navigate('/');
     logout();
   }
