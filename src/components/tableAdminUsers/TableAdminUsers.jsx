@@ -13,7 +13,7 @@ export default function TableAdminUsers() {
 
     useEffect(() => {
       axios
-        .get(`http://localhost:3000/api/users?token=${user.token || ''}`)
+        .get(`https://paradise-films-backend.vercel.app/api/users?token=${user.token || ''}`)
         .then((response) => {
           const foundUsers = response.data.map((user) => ({
             id: user._id,

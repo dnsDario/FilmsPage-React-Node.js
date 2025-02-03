@@ -14,7 +14,7 @@ export const CarouselSeries = () => {
   
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/series?token=${user.token}`)
+      .get(`https://paradise-films-backend.vercel.app/api/series?token=${user.token}`)
       .then((response) => {
         const newSeries = response.data.map((serie) => ({
           title: serie.title,

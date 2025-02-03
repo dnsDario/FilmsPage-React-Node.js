@@ -13,7 +13,7 @@ export const CarouselFilms = () => {
   const [films, setFilms] = useState([]);
   
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/films?token=${user.token}`).then((response) => {
+    axios.get(`https://paradise-films-backend.vercel.app/api/films?token=${user.token}`).then((response) => {
       const newFilms = response.data.map((film) => ({
         title: film.title,
         img: film.img,

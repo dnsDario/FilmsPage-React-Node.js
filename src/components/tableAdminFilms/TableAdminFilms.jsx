@@ -11,7 +11,7 @@ export default function TableAdminFilms(){
 
     useEffect(() => {
       axios
-        .get(`http://localhost:3000/api/films?token=${user.token}`)
+        .get(`https://paradise-films-backend.vercel.app/api/films?token=${user.token}`)
         .then((response) => {
           const foundFilms = response.data.map((film) => ({
             id: film._id,

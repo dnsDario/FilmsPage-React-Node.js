@@ -8,7 +8,7 @@ export default function DeleteUsers() {
   const [id, setId] = useState("");
   
   function deleteUser(id){  
-    let routeDeleteUserById = `http://localhost:3000/api/users/${id}?token=${user.token}`;
+    let routeDeleteUserById = `https://paradise-films-backend.vercel.app/api/users/${id}?token=${user.token}`;
     console.log ('esta es la ruta delete',routeDeleteUserById)
     axios.delete(routeDeleteUserById)
       .then((response) => {
@@ -34,7 +34,7 @@ export default function DeleteUsers() {
         />
         <button
           className="btn btn-primary"
-          onClick={(e) => {
+          onClick={() => {
             deleteUser(id);
           }}
         >
