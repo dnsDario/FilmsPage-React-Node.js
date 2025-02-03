@@ -3,11 +3,13 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/user.model");
 
 async function searchUsers(req, res){
-  try{
-    usuarios = await User.find({})
-    res.json(usuarios)
-  } catch (error){
-    res.status(500).json({ msg: "error interno del servidor para buscar users" });
+  try {
+    usuarios = await User.find();
+    return res.json(usuarios);
+  } catch (error) {
+    res
+      .status(500)
+      .json({ msg: "error interno del servidor para buscar users" });
   }
 };
 

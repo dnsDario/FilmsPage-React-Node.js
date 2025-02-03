@@ -3,29 +3,32 @@
 import React from "react";
 import {useState, useEffect} from "react";
 import { Carousel } from "keep-react";
-import './Carousel.css'
+import '../carousels/Carousel.css'
 import axios from "axios";
 import { useContext } from "react";
 import { SessionContext } from "../../context/SessionProvider";
 
-export const CarouselFilms = () => {
+export const CarouselSeries = () => {
   const { user } = useContext(SessionContext);
-  const [films, setFilms] = useState([]);
+  const [series, setSeries] = useState([]);
   
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/films?token=${user.token}`).then((response) => {
-      const newFilms = response.data.map((film) => ({
-        title: film.title,
-        img: film.img,
-        year: film.year,
-        category: film.category,
-        descripcion: film.descripcion,
-      }));
-      setFilms(newFilms);
-    }).catch((error) => {
-      console.log("Error al obtener las películas:", error);
-    });
-  },[user.token]);
+    axios
+      .get(`http://localhost:3000/api/series?token=${user.token}`)
+      .then((response) => {
+        const newSeries = response.data.map((serie) => ({
+          title: serie.title,
+          img: serie.img,
+          year: serie.year,
+          category: serie.category,
+          descripcion: serie.descripcion,
+        }));
+        setSeries(newSeries);
+      })
+      .catch((error) => {
+        console.log("Error al obtener las películas:", error);
+      });
+  }, [user.token]);
   
 
   const moverCarrusel = React.useRef()
@@ -37,19 +40,20 @@ export const CarouselFilms = () => {
     moverCarrusel.current.scrollLeft += 1056 //1320*0.8 para que la última por la derecha sea la primera por la izq.
   }
 
+  
+
   return (
     <>
       <div className="contenedor">
         <div className="carruselsSuperiores">
           <div className="carousel">
             <h2>Películas de Drama</h2>
-            <Carousel
-              className="carouselObject"
+            <Carousel className="carouselObject"
               slideInterval={3000}
               showControls={true}
               indicators={true}
             >
-              {films
+              {series
                 .filter((i) => i.category.toLowerCase().includes("drama"))
                 .map((i, idx) => (
                   <img key={idx} src={i.img} />
@@ -57,14 +61,13 @@ export const CarouselFilms = () => {
             </Carousel>
           </div>
           <div className="carousel">
-            <h2>Películas de Comedia</h2>
-            <Carousel
-              className="carouselObject"
+            <h2>Series de Comedia</h2>
+            <Carousel className="carouselObject"
               slideInterval={2000}
               showControls={true}
               indicators={true}
             >
-              {films
+              {series
                 .filter((i) => i.category.toLowerCase().includes("comedia"))
                 .map((i, idx) => (
                   <img key={idx} src={i.img} />
@@ -74,7 +77,7 @@ export const CarouselFilms = () => {
         </div>
         <div className="contenedor-peliculas-recomendadas">
           <div className="contenedor-titulo-controles">
-            <h2>Peliculas Recomendadas</h2>
+            <h2>Series Recomendadas</h2>
             <div className="indicadores"></div>
           </div>
           <div className="contenedor-principal">
@@ -83,7 +86,7 @@ export const CarouselFilms = () => {
             </button>
             <div className="contenedor-carousel" ref={moverCarrusel}>
               <div className="carousel">
-                {films.map((i, idx) => (
+                {series.map((i, idx) => (
                   <div className="pelicula" key={idx}>
                     {" "}
                     <a href="">
@@ -99,9 +102,8 @@ export const CarouselFilms = () => {
             </button>
           </div>
         </div>
-        <h2>Todas las Películas</h2>
         <div className="contenedor-peliculas-coleccion">
-          {films.map((i, idx) => (
+          {series.map((i, idx) => (
             <div className="pelicula-coleccion" key={idx}>
               {" "}
               <a href="">
@@ -111,6 +113,7 @@ export const CarouselFilms = () => {
             </div>
           ))}
         </div>
+        
       </div>
     </>
   );

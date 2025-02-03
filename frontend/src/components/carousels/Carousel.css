@@ -2,9 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
-    height: calc(100vh - 100px);
+    height: auto;
+    color: aquamarine;
     
 }
 
@@ -12,16 +12,21 @@
     display: flex;
     flex-flow: wrap row;
     width: 100%;
+    height: auto;
     justify-content: space-evenly;
+    padding-top: 30px;
 }
 .carousel{
-    width: 40%;
+    width: 35%;
     height: auto;
 }
 .carouselObject{
+    width: 400px;
     height: 300px;
+    margin: 0 auto;
 }
 .carousel h2{
+    text-align: center;
     color:aquamarine;
     font-weight: 700;
     font-size: 26px;
@@ -130,4 +135,81 @@
 .contenedor-peliculas-recomendadas .contenedor-carousel .carousel .pelicula img:hover{
     scale: 1.15;
     transform-origin: center;
+}
+
+.contenedor-peliculas-coleccion{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.pelicula-coleccion{
+    display: flex;
+    justify-content: center;
+    width: calc(100%/5 - 80px);
+    height: auto;
+    margin: 15px;
+    
+
+}
+.pelicula-coleccion img{
+    height: 250px;
+    border-radius: 10px;
+}
+
+@media (width < 1124px){
+    .carruselsSuperiores{
+        width: 90%;
+        height: auto;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .carousel{
+        width: 100%;
+        height: auto;
+        margin-block: 30px;
+    }
+    .carouselObject{
+        width: 90%;
+        height: 300px;
+    }
+    .contenedor-peliculas-recomendadas{
+        display: none;
+    }
+    .pelicula-coleccion{
+        display: flex;
+        justify-content: center;
+        width: calc((100% - 160px)/4);
+        height: auto;
+        margin: 20px;
+        
+    
+    }
+    .pelicula-coleccion img{
+        height: 250px;
+        border-radius: 10px;
+    }
+}
+
+@media (width < 776px){
+    .carruselsSuperiores{
+        flex-flow: column;
+    }
+    .pelicula-coleccion{
+        display: flex;
+        justify-content: center;
+        width: calc((100% - 80px)/2);
+        height: auto;
+        margin: 20px;
+        
+    
+    }
+    .pelicula-coleccion img{
+        height: 250px;
+        border-radius: 10px;
+    }
 }

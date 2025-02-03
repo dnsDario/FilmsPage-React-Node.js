@@ -2,6 +2,7 @@
     display: flex;
     flex-flow: column nowrap;
     height: auto;
+    
 }
 
 .formFilms_Create{

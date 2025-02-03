@@ -8,6 +8,7 @@ import Home from "./pages/home/Home"
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
 import Films from './pages/films/Films'
+import Series from './pages/series/Series'
 import AdminFilms from './pages/admin-films/Admin-films'
 import AdminUsers from './pages/admin-users/Admin-users'
 
@@ -29,6 +30,8 @@ function App() {
     navigate('/');
     logout();
   }
+
+  
   return (
     <>
       <header>
@@ -39,6 +42,7 @@ function App() {
             {cookies.user?'':<li><Link className="btnNav" to="/signup"><i><GiArchiveRegister /></i>Registro</Link></li>}
             {cookies.user?'':<li><Link className="btnNav" to="/login"><i><AiOutlineLogin /></i>Iniciar Sesión</Link></li>}            
             {cookies.user?<li><Link className="btnNav" to="/films"><i><GiFilmStrip /></i>Películas</Link></li>:''}
+            {cookies.user?<li><Link className="btnNav" to="/series"><i><GiFilmStrip /></i>Series</Link></li>:''}
             {cookies.user && cookies.user.role === 'admin'?<li><Link className="btnNav" to="/admin-films"><i><GrUserAdmin /></i>Admin Films</Link></li>:''}  
             {cookies.user && cookies.user.role === 'admin'?<li><Link className="btnNav" to="/admin-users"><i><GrUserAdmin /></i>Admin Users</Link></li>:''}  
             {cookies.user?<button onClick={handleLogout}><Link className='logout'><i><AiOutlineLogout /></i>Logout</Link></button>: ''}            
@@ -51,6 +55,7 @@ function App() {
         <Route path="/login" element={user? <Navigate to="/films"></Navigate> : <Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
         <Route path="/films" element={<Films></Films>}></Route>
+        <Route path="/series" element={<Series></Series>}></Route>
         <Route path="/admin-films" element={<AdminFilms></AdminFilms>}></Route>
         <Route path="/admin-users" element={<AdminUsers></AdminUsers>}></Route>
       </Routes>
