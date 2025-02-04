@@ -2,7 +2,7 @@
 "use client";
 import React from "react";
 import {useState, useEffect} from "react";
-import { Carousel } from "keep-react";
+
 import './Carousel.css'
 import axios from "axios";
 import { useContext } from "react";
@@ -13,7 +13,7 @@ export const CarouselFilms = () => {
   const [films, setFilms] = useState([]);
   
   useEffect(() => {
-    axios.get(`http://localhost:3000/api/films?token=${user.token}`).then((response) => {
+    axios.get(`https://paradise-films-backend.vercel.app/api/films?token=${user.token}`).then((response) => {
       const newFilms = response.data.map((film) => ({
         title: film.title,
         img: film.img,
@@ -42,7 +42,7 @@ export const CarouselFilms = () => {
       <div className="contenedor">
         <div className="carruselsSuperiores">
           <div className="carousel">
-            <h2>Películas de Drama</h2>
+            {/* <h2>Películas de Drama</h2>
             <Carousel
               className="carouselObject"
               slideInterval={3000}
@@ -69,7 +69,7 @@ export const CarouselFilms = () => {
                 .map((i, idx) => (
                   <img key={idx} src={i.img} />
                 ))}
-            </Carousel>
+            </Carousel> */}
           </div>
         </div>
         <div className="contenedor-peliculas-recomendadas">

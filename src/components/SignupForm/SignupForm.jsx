@@ -11,7 +11,7 @@ export default function SignupForm()  {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (datos.password === datos.repetirPassword) {
-      axios.post("http://localhost:3000/api/users/signup", datos)
+      axios.post("https://paradise-films-backend.vercel.app/api/users/signup", datos)
       .then((response)=>{
         alert("Registrado con éxito")
         navigate("/login")

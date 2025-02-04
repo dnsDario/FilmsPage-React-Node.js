@@ -11,7 +11,7 @@ export default function DeleteFilms() {
   
   
   function deleteFilm(id){
-    let routeDeleteFilmById = `http://localhost:3000/api/films/${id}?token=${user.token}`;
+    let routeDeleteFilmById = `https://paradise-films-backend.vercel.app/api/films/${id}?token=${user.token}`;
     axios.delete(routeDeleteFilmById)
       .then((response) => {
         setId('')
