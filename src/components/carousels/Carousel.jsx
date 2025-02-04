@@ -2,7 +2,6 @@
 "use client";
 import React from "react";
 import {useState, useEffect} from "react";
-
 import './Carousel.css'
 import axios from "axios";
 import { useContext } from "react";

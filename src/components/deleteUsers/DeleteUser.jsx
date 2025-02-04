@@ -34,7 +34,7 @@ export default function DeleteUsers() {
         />
         <button
           className="btn btn-primary"
-          onClick={(e) => {
+          onClick={() => {
             deleteUser(id);
           }}
         >

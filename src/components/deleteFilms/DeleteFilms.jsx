@@ -35,7 +35,7 @@ export default function DeleteFilms() {
           />
           <button
             className="btn btn-primary"
-            onClick={(e) => {
+            onClick={() => {
               deleteFilm(id);
             }}
           >
