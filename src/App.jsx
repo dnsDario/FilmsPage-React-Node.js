@@ -45,7 +45,7 @@ function App() {
             {cookies.user?<li><Link className="btnNav" to="/series"><i><GiFilmStrip /></i>Series</Link></li>:''}
             {cookies.user && cookies.user.role === 'admin'?<li><Link className="btnNav" to="/admin-films"><i><GrUserAdmin /></i>Admin Films</Link></li>:''}  
             {cookies.user && cookies.user.role === 'admin'?<li><Link className="btnNav" to="/admin-users"><i><GrUserAdmin /></i>Admin Users</Link></li>:''}  
-            {cookies.user?<button onClick={handleLogout}><Link className='logout'><i><AiOutlineLogout /></i>Logout</Link></button>: ''}            
+            {cookies.user?<li onClick={handleLogout}><Link className='logout'><i><AiOutlineLogout /></i>Logout</Link></li>: ''}            
           </ul>
         </nav>
       </header>

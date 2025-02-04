@@ -6,6 +6,7 @@ import '../carousels/Carousel.css'
 import axios from "axios";
 import { useContext } from "react";
 import { SessionContext } from "../../context/SessionProvider";
+import { Carousel } from "react-bootstrap";
 
 export const CarouselSeries = () => {
   const { user } = useContext(SessionContext);
@@ -45,33 +46,29 @@ export const CarouselSeries = () => {
     <>
       <div className="contenedor">
         <div className="carruselsSuperiores">
-          <div className="carousel">
-            {/* <h2>Películas de Drama</h2>
-            <Carousel className="carouselObject"
-              slideInterval={3000}
-              showControls={true}
-              indicators={true}
-            >
+        <div className="carousel">
+          <h2>Series de Drama</h2>
+            <Carousel>
               {series
                 .filter((i) => i.category.toLowerCase().includes("drama"))
                 .map((i, idx) => (
-                  <img key={idx} src={i.img} />
+                  <Carousel.Item>
+                    <img key={idx} src={i.img} alt="imagen" className="carouselImg" />
+                  </Carousel.Item>
                 ))}
             </Carousel>
-          </div>
-          <div className="carousel">
+            </div>
+            <div className="carousel">
             <h2>Series de Comedia</h2>
-            <Carousel className="carouselObject"
-              slideInterval={2000}
-              showControls={true}
-              indicators={true}
-            >
+            <Carousel>
               {series
                 .filter((i) => i.category.toLowerCase().includes("comedia"))
                 .map((i, idx) => (
-                  <img key={idx} src={i.img} />
+                  <Carousel.Item>
+                    <img key={idx} src={i.img} alt="imagen" className="carouselImg"/>
+                  </Carousel.Item>
                 ))}
-            </Carousel> */}
+            </Carousel>
           </div>
         </div>
         <div className="contenedor-peliculas-recomendadas">
@@ -84,7 +81,7 @@ export const CarouselSeries = () => {
               <i className="fa-solid fa-angle-left"></i>
             </button>
             <div className="contenedor-carousel" ref={moverCarrusel}>
-              <div className="carousel">
+              <div className="carousel_row">
                 {series.map((i, idx) => (
                   <div className="pelicula" key={idx}>
                     {" "}
@@ -101,6 +98,7 @@ export const CarouselSeries = () => {
             </button>
           </div>
         </div>
+        <h2>Todas las Series</h2>
         <div className="contenedor-peliculas-coleccion">
           {series.map((i, idx) => (
             <div className="pelicula-coleccion" key={idx}>
