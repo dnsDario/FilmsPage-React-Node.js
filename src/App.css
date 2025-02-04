@@ -1,9 +1,10 @@
-
+li{list-style: none;}
 nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     text-align: center;
+    width: 100%;
     height: 80px;
     padding: 20px;
     color:white;
@@ -18,7 +19,21 @@ nav{
     color: aqua;
 }
 
-ul{
+.menu{
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+    font-size: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.noNavBar{
+    display: none;
+}
+.navBarPC{
     display: flex;
     flex-direction: row;
     width: 70%;
@@ -26,15 +41,40 @@ ul{
     margin: 0 !important;
     align-items: center;
     color: black;
+    z-index: 1000;
 }
-nav ul li:hover{
+.navBarMenu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    top: 80px;
+    right: 0px;
+    padding: 0;
+    color: black;
+    z-index: 1000;
+}
+.navBarPC li:hover{
     transform: translateY(0.1rem);
     scale: 1.025;
 }
 
-nav ul li link{
+.navBarPC li link{
     text-decoration: none;
     
+}
+.navBarMenu li{
+    width: 100%;
+    padding: 10px;
+    margin:0;
+    color: black;
+    background-color: gray;
+    border: 1px solid black;
+    list-style: none;
+}
+.navBarMenu li link{
+    width: 95%;
 }
 
 .btnNav{
@@ -58,8 +98,9 @@ nav ul li link{
     color: red;
     background-color: orange;
     border: 3px solid orange;
-    border-radius: 10px;
+    border-radius: 5px;
     text-decoration: none;
+    font-weight: 600;
 }
 main{
     position: absolute;
@@ -67,27 +108,34 @@ main{
     left: 0;
     width: 100%;
     height: auto;
+    background-color: black;
+    padding-bottom: 20px;
 }
 
 
-@media screen and (max-width: 1120px) {
+@media screen and (width < 1120px) {
     nav{
-        height: 120px;
+        height: 80px;
     }
     .logoNav{
-        width: 200px;
-        font-size: 32px;
+        width: 60%;
+        font-size: 26px;
         text-align: center;
     }
     .btnNav{
-        font-size: 16px;
+        display: flex;
+        align-items: center;
+        width: 90%;
+        font-size: 20px;
+        margin: 0;
     }
     .btnNav i{
-        font-size: 18px;
+        font-size: 16px;
+        
     }
 }
 
-@media screen and (max-width: 820px) {
+/* @media screen and (width < 876px) {
     .logoNav{
         width: 150px;
         font-size: 28px;
@@ -99,4 +147,4 @@ main{
     .btnNav i{
         font-size: 18px;
     }
-}
+} */
